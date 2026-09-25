@@ -1,13 +1,9 @@
-# 🎓 Danh Sách Link Thư Mời Tốt Nghiệp - Hoàng Thị Thuyên (Chính Thức)
+# 🎓 Danh Sách Link Thư Mời Tốt Nghiệp - Hoàng Thị Thuyên (Kho Riêng Biệt)
 
 - **Thời gian:** 15:30 - Thứ 7, ngày 03.10.2026
 - **Địa điểm:** Tòa VietNam Building, Trường Đại học Công nghệ Đông Á (EAUT)
 
-> **✨ Ưu điểm vượt trội:**
-> - Đã chạy chính thức 100% trên GitHub Pages của bạn!
-> - Bấm vào là mở thiệp ra ngay, không có màn hình cảnh báo, không hỏi mã IP.
-> - Hoạt động 24/7 vĩnh viễn (kể cả khi bạn tắt máy tính).
-> - Tự động hiển thị đúng tên từng người ở dòng **"THÂN MỜI"**.
+> **✨ Ưu điểm:** Link sạch đẹp, chuyên nghiệp, **hoàn toàn không còn chữ "Track" của trường**, bấm vào là vào thẳng thiệp.
 
 ---
 
@@ -15,19 +11,19 @@
 
 | STT | Người nhận | Link thiệp mời riêng (Bấm hoặc Copy gửi) |
 | :---: | :--- | :--- |
-| 1 | **Chị Ngọc Anh** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Chị+Ngọc+Anh](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Chị+Ngọc+Anh) |
-| 2 | **Lũ lợn** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Lũ+lợn](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Lũ+lợn) |
-| 3 | **Gia đình ông Hai** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Gia+đình+ông+Hai](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Gia+đình+ông+Hai) |
-| 4 | **Bạn Ngọc Linh** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Ngọc+Linh](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Ngọc+Linh) |
-| 5 | **Bạn Thanh Mai** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Thanh+Mai](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Thanh+Mai) |
-| 6 | **Bạn Ngọc Mai** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Ngọc+Mai](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Ngọc+Mai) |
-| 7 | **Bạn Dương** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Dương](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Dương) |
-| 8 | **Bạn Tình** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Tình](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Tình) |
-| 9 | **Bạn Thế Anh** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Thế+Anh](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Thế+Anh) |
-| 10 | **Bạn Kiên** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Kiên](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Kiên) |
-| 11 | **Bạn Hùng** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Hùng](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Bạn+Hùng) |
-| 12 | **Em Liễu** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Em+Liễu](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Em+Liễu) |
-| 13 | **Anh Nhân** | [https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Anh+Nhân](https://thuynie.github.io/Track1_Day17_2A202601910_HoangThiThuyen/?to=Anh+Nhân) |
+| 1 | **Chị Ngọc Anh** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Chị+Ngọc+Anh](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Chị+Ngọc+Anh) |
+| 2 | **Lũ lợn** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Lũ+lợn](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Lũ+lợn) |
+| 3 | **Gia đình ông Hai** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Gia+đình+ông+Hai](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Gia+đình+ông+Hai) |
+| 4 | **Bạn Ngọc Linh** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Ngọc+Linh](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Ngọc+Linh) |
+| 5 | **Bạn Thanh Mai** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Thanh+Mai](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Thanh+Mai) |
+| 6 | **Bạn Ngọc Mai** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Ngọc+Mai](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Ngọc+Mai) |
+| 7 | **Bạn Dương** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Dương](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Dương) |
+| 8 | **Bạn Tình** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Tình](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Tình) |
+| 9 | **Bạn Thế Anh** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Thế+Anh](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Thế+Anh) |
+| 10 | **Bạn Kiên** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Kiên](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Kiên) |
+| 11 | **Bạn Hùng** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Hùng](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Bạn+Hùng) |
+| 12 | **Em Liễu** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Em+Liễu](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Em+Liễu) |
+| 13 | **Anh Nhân** | [https://thuynie.github.io/thu-moi-tot-nghiep/?to=Anh+Nhân](https://thuynie.github.io/thu-moi-tot-nghiep/?to=Anh+Nhân) |
 
 ---
 
