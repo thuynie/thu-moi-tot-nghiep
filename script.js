@@ -197,23 +197,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const TARGET_EMAIL = 'hoanght614@gmail.com';
+
   async function saveWishToFile(wish) {
-    const endpoints = ['/api/wishes', 'http://localhost:8089/api/wishes'];
-    for (const url of endpoints) {
-      try {
-        const response = await fetch(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(wish)
-        });
-        if (response.ok) {
-          return true;
-        }
-      } catch (err) {
-        // Fallback continues
-      }
+    // 1. Send wish directly to Thuyen's Gmail
+    try {
+      await fetch(`https://formsubmit.co/ajax/${TARGET_EMAIL}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          "Người gửi": wish.name,
+          "Biểu tượng": wish.sticker,
+          "Thời gian": wish.createdAt,
+          "Lời chúc": wish.message,
+          "_subject": `🎓 Lời chúc tốt nghiệp mới từ: ${wish.name}`,
+          "_template": "table",
+          "_captcha": "false"
+        })
+      });
+    } catch (err) {
+      console.warn('FormSubmit email note', err);
     }
-    return false;
+
+    // 2. Also save to local server if running
+    try {
+      await fetch('/api/wishes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(wish)
+      });
+    } catch (_) {}
+
+    return true;
   }
 
   if (inlineWishForm) {
