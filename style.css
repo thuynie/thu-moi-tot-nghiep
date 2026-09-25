@@ -1,0 +1,1383 @@
+/* ==========================================================================
+   GRADUATION INVITATION STYLING - HOÀNG THỊ THUYÊN 🎓
+   Aesthetic: Luxury Ivory Parchment, Royal Navy Sashes & Burnished Gold Foil
+   Clean Centered Card Layout + Private Direct Wishes System
+   ========================================================================== */
+
+:root {
+  --bg-parchment: #fcf9f2;
+  --bg-card: #fefdfa;
+  --bg-dark-overlay: #0b1326;
+  --navy-sash-1: #0d1e3d;
+  --navy-sash-2: #162c5b;
+  --gold-primary: #d4af37;
+  --gold-light: #f7e7b4;
+  --gold-dark: #8b6834;
+  --gold-accent: #c59b27;
+  --text-primary: #3b2c1a;
+  --text-muted: #5e4e3a;
+  --text-navy: #0e1e3e;
+  --shadow-card: 0 25px 60px -15px rgba(22, 33, 62, 0.25), 0 0 0 1px rgba(212, 175, 55, 0.15);
+  --border-radius-card: 20px;
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(circle at 50% 10%, #203158 0%, #0d162d 50%, #060b17 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding: 24px 12px 60px;
+}
+
+/* Background floating particles */
+#particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(247, 231, 180, 0.08) 0%, transparent 45%);
+}
+
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================================================
+   TOP ACTION BAR
+   ========================================================================== */
+.top-nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.pill-btn {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(247, 231, 180, 0.35);
+  color: #f7e7b4;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.pill-btn:hover {
+  background: rgba(212, 175, 55, 0.25);
+  border-color: #ffd700;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+}
+
+.pill-btn.highlight {
+  background: linear-gradient(135deg, #d4af37, #aa820a);
+  color: #121f3d;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.pill-btn.highlight:hover {
+  background: linear-gradient(135deg, #f3d88b, #c59b27);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.pill-btn.special {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: #fff;
+  border: none;
+}
+
+/* ==========================================================================
+   INVITATION CARD CONTAINER (CENTERED WITH DUAL SASHES)
+   ========================================================================== */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.45));
+}
+
+/* ==========================================================================
+   THE DUAL SASHES (LEFT & RIGHT) - From Image 2
+   ========================================================================== */
+.sash {
+  width: 86px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.sash-left {
+  margin-right: -16px;
+}
+
+.sash-right {
+  margin-left: -16px;
+}
+
+.sash-gold-border {
+  flex: 1;
+  background: linear-gradient(180deg, #132448 0%, #0a1429 100%);
+  border: 2px solid var(--gold-primary);
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.25);
+  padding: 16px 6px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Inner gold pin-stripe border on sashes */
+.sash-gold-border::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px dashed rgba(247, 231, 180, 0.5);
+  pointer-events: none;
+}
+
+.sash-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Sash Top Icons */
+.sash-top-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.school-logo-svg, .mortarboard-svg {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.sash-star {
+  color: var(--gold-light);
+  font-size: 14px;
+  line-height: 1;
+  animation: pulseStar 2s infinite ease-in-out;
+}
+
+/* Vertical Class Of 2026 */
+.sash-vertical-year {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.v-letter {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #f7e7b4;
+  letter-spacing: 2px;
+  line-height: 1.35;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.v-of {
+  font-size: 10px;
+  font-weight: 600;
+  margin: 2px 0 8px;
+  color: var(--gold-primary);
+}
+
+.year-calligraphy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.y-digit {
+  font-family: 'Cinzel', serif;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 0.95;
+  background: linear-gradient(180deg, #fff7d6 0%, #d4af37 60%, #9e7a20 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.6));
+}
+
+.sash-divider-star {
+  color: var(--gold-primary);
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+/* Sash Bottom Label */
+.sash-bottom-label {
+  margin-top: auto;
+  padding-bottom: 5px;
+}
+
+.gold-box {
+  border: 1px solid var(--gold-light);
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  background: rgba(212, 175, 55, 0.15);
+  border-radius: 4px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Vertical Identity (Right Sash - Exact from Image 2) */
+.sash-vertical-identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 15px 0;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.vertical-subtext {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #f7e7b4;
+  margin-left: 6px;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.vertical-name {
+  font-family: 'Cinzel', serif;
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #fff6db;
+  letter-spacing: 4px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9), 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Bottom Fishtail V cut for sashes */
+.sash-tail-v {
+  width: 0;
+  height: 0;
+  border-left: 43px solid transparent;
+  border-right: 43px solid transparent;
+  border-top: 26px solid #0a1429;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+  position: relative;
+  margin-top: -1px;
+}
+
+.sash-tail-v::after {
+  content: '';
+  position: absolute;
+  top: -26px;
+  left: -43px;
+  width: 86px;
+  height: 2px;
+  background: var(--gold-primary);
+}
+
+/* ==========================================================================
+   CARD BODY (From Image 1)
+   ========================================================================== */
+.card-body {
+  flex: 1;
+  background-color: var(--bg-card);
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, #fffbf2 0%, #f6f0e3 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: var(--border-radius-card);
+  padding: 42px 36px 32px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Double inner border on the card */
+.card-body::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid rgba(139, 104, 52, 0.22);
+  border-radius: calc(var(--border-radius-card) - 6px);
+  pointer-events: none;
+}
+
+/* Corner Ribbons */
+.corner-ribbon {
+  position: absolute;
+  top: 6px;
+  width: 90px;
+  height: 90px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.corner-left {
+  left: 6px;
+}
+
+.corner-right {
+  right: 6px;
+  transform: scaleX(-1);
+}
+
+/* Header section */
+.card-header {
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.subtitle-invited {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  color: #3b2814;
+  line-height: 1.1;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #443019 0%, #2b1d0c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.8));
+}
+
+.graduation-for {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  color: #4a3822;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+/* Recipient Box (Anh Em Tổ 3) */
+.recipient-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 12px 0 16px;
+  position: relative;
+}
+
+.scroll-decoration {
+  width: 58px;
+  height: 38px;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.recipient-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.than-moi-label {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  margin-bottom: 2px;
+}
+
+.guest-name-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+}
+
+.guest-name-wrapper:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.guest-name {
+  font-family: 'Alex Brush', 'Dancing Script', cursive;
+  font-size: 46px;
+  font-weight: 700;
+  color: #3e2a14;
+  line-height: 1.15;
+  transform: rotate(-2deg);
+  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.25);
+}
+
+.edit-guest-btn {
+  background: none;
+  border: none;
+  color: var(--gold-dark);
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: var(--transition-smooth);
+}
+
+.edit-guest-btn:hover {
+  opacity: 1;
+  color: var(--navy-sash-1);
+  transform: scale(1.15);
+}
+
+/* Card Divider */
+.card-divider {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 380px;
+  margin: 4px 0 14px;
+}
+
+.card-divider .line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8b6834, transparent);
+}
+
+.card-divider .gem {
+  color: var(--gold-dark);
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+/* Heartfelt Quote (Exact from Image 1) */
+.invite-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16.5px;
+  line-height: 1.55;
+  font-weight: 600;
+  color: #4a3b2a;
+  max-width: 480px;
+  margin: 0 auto 18px;
+  padding: 0 8px;
+}
+
+/* Time & Venue Rows (Pinned to Đại học Công nghệ Đông Á) */
+.info-badges-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.time-row {
+  font-family: 'Playfair Display', serif;
+  color: #3b2c1a;
+  font-size: 16.5px;
+  font-weight: 700;
+}
+
+.time-row .flourish {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--gold-dark);
+}
+
+.info-label {
+  font-weight: 600;
+  color: #5a452c;
+}
+
+.info-value {
+  font-weight: 700;
+  color: #2e1f0e;
+}
+
+.venue-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.venue-main {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15.5px;
+}
+
+.venue-icon {
+  color: #c53030;
+  font-size: 15px;
+}
+
+.venue-sub {
+  font-size: 13px;
+  font-style: italic;
+  color: #6d5b45;
+  margin-top: 3px;
+}
+
+/* Card Quick Action Badges */
+.card-quick-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.action-tag {
+  background: rgba(139, 104, 52, 0.08);
+  border: 1px solid rgba(139, 104, 52, 0.25);
+  color: #4a361e;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.action-tag:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-primary);
+  color: #121f3d;
+  transform: translateY(-2px);
+}
+
+/* Graduates Lineart Row */
+.graduates-lineart-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 440px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.grad-figure {
+  width: 130px;
+  height: 160px;
+  transition: transform 0.3s ease;
+}
+
+.grad-figure:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.center-sparkles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-dark);
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.sparkle {
+  animation: floatSparkle 2s ease-in-out infinite alternate;
+}
+
+.sparkle.s1 { animation-delay: 0s; }
+.sparkle.s2 { animation-delay: 0.5s; font-size: 20px; color: var(--gold-primary); }
+.sparkle.s3 { animation-delay: 1s; }
+
+/* Call-to-action Prompt Banner */
+.wishes-prompt-banner {
+  width: 100%;
+  max-width: 490px;
+  margin-top: 6px;
+}
+
+.prompt-glow-border {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(254, 248, 237, 0.95));
+  border: 1.5px solid #d4af37;
+  border-radius: 14px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  animation: subtlePulse 3s infinite ease-in-out;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.prompt-glow-border:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  border-color: #b89025;
+}
+
+.prompt-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  animation: bounceMini 2s infinite ease;
+}
+
+.prompt-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.prompt-text strong {
+  font-size: 13.5px;
+  color: #122144;
+  font-weight: 700;
+}
+
+.prompt-text span {
+  font-size: 11.5px;
+  color: #5c4b38;
+  line-height: 1.35;
+}
+
+.prompt-btn {
+  background: linear-gradient(135deg, #132448, #1c366e);
+  color: #f7e7b4;
+  border: 1px solid var(--gold-primary);
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+
+.prompt-btn:hover {
+  background: linear-gradient(135deg, #d4af37, #9e7a20);
+  color: #0b1429;
+}
+
+/* ==========================================================================
+   COUNTDOWN TIMER SECTION
+   ========================================================================== */
+.countdown-section {
+  width: 100%;
+  max-width: 620px;
+  margin: 36px 0 24px;
+  text-align: center;
+}
+
+.countdown-title {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #f7e7b4;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.countdown-card {
+  background: rgba(19, 36, 72, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 12px;
+  padding: 12px 16px;
+  min-width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.count-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #f7e7b4;
+  line-height: 1;
+}
+
+.count-unit {
+  font-size: 11px;
+  font-weight: 600;
+  color: #c9b990;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   PRIVATE WISHES SECTION (GỬI RIÊNG, KHÔNG CÔNG KHAI)
+   ========================================================================== */
+.wishes-wall-section {
+  width: 100%;
+  max-width: 680px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #f7e7b4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.ornament-line {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.section-desc {
+  font-size: 13px;
+  color: #c3b9a5;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 520px;
+}
+
+.wish-form-wrapper {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 18px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.wish-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.form-group.flex-1 {
+  flex: 1;
+  min-width: 220px;
+}
+
+.form-group label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #f7e7b4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-group input, 
+.form-group textarea {
+  background: rgba(14, 25, 49, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  transition: var(--transition-smooth);
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  background: rgba(19, 36, 72, 0.95);
+}
+
+.quick-icons-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #f7e7b4;
+  flex-wrap: wrap;
+}
+
+.sticker-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  font-size: 18px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.sticker-btn:hover, .sticker-btn.active {
+  background: rgba(212, 175, 55, 0.35);
+  border-color: #ffd700;
+  transform: scale(1.18);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.submit-wish-btn {
+  flex: 1;
+  min-width: 220px;
+  background: linear-gradient(135deg, #d4af37, #9e7a20);
+  color: #0b1429;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3);
+}
+
+.submit-wish-btn:hover {
+  background: linear-gradient(135deg, #f7e7b4, #c59b27);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.5);
+}
+
+.zalo-wish-btn {
+  background: #0068ff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.zalo-wish-btn:hover {
+  background: #0052cc;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.page-footer {
+  margin-top: 48px;
+  text-align: center;
+  color: #c9b990;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.page-footer .small {
+  font-size: 11.5px;
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   MODALS
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  background: #111d38;
+  border: 1px solid var(--gold-primary);
+  border-radius: 18px;
+  width: 90%;
+  max-width: 440px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transform: translateY(20px);
+  transition: var(--transition-smooth);
+}
+
+.modal-box.text-center {
+  text-align: center;
+}
+
+.modal-backdrop.active .modal-box {
+  transform: translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h3 {
+  font-size: 17px;
+  color: #f7e7b4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #c9b990;
+  cursor: pointer;
+}
+
+.modal-body p {
+  font-size: 13.5px;
+  color: #e2d9c5;
+  margin-bottom: 12px;
+}
+
+.modal-body input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--gold-primary);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.modal-hint {
+  font-size: 12px !important;
+  color: #f7e7b4 !important;
+  margin-top: 10px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.success-icon-badge {
+  font-size: 48px;
+  margin-bottom: 4px;
+  animation: bounceMini 1.5s infinite;
+}
+
+/* ==========================================================================
+   TOAST NOTIFICATION
+   ========================================================================== */
+.toast-notice {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: rgba(14, 25, 49, 0.95);
+  border: 1px solid var(--gold-primary);
+  color: #f7e7b4;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 13.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 120;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toast-notice.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ==========================================================================
+   ANIMATIONS & KEYFRAMES
+   ========================================================================== */
+@keyframes pulseStar {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+@keyframes subtlePulse {
+  0%, 100% { box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25); }
+  50% { box-shadow: 0 6px 25px rgba(212, 175, 55, 0.55); border-color: #ffd700; }
+}
+
+@keyframes floatSparkle {
+  0% { transform: translateY(0) scale(0.9); }
+  100% { transform: translateY(-6px) scale(1.2); }
+}
+
+@keyframes bounceMini {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLETS & MOBILE PHONES)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .sash {
+    width: 62px;
+  }
+  
+  .sash-left {
+    margin-right: -12px;
+  }
+  
+  .sash-right {
+    margin-left: -12px;
+  }
+
+  .sash-gold-border {
+    padding: 10px 4px 14px;
+  }
+
+  .school-logo-svg, .mortarboard-svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .v-letter {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .y-digit {
+    font-size: 19px;
+  }
+
+  .vertical-name {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+  }
+
+  .vertical-subtext {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .gold-box {
+    font-size: 9.5px;
+    padding: 2px 4px;
+  }
+
+  .card-body {
+    padding: 30px 18px 24px;
+  }
+
+  .main-title {
+    font-size: 32px;
+    letter-spacing: 3px;
+  }
+
+  .guest-name {
+    font-size: 36px;
+  }
+
+  .invite-quote {
+    font-size: 14.5px;
+  }
+
+  .info-row {
+    font-size: 13.5px;
+  }
+
+  .grad-figure {
+    width: 100px;
+    height: 125px;
+  }
+
+  .countdown-card {
+    min-width: 58px;
+    padding: 8px 10px;
+  }
+
+  .count-num {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 14px 6px 40px;
+  }
+
+  .card-container {
+    flex-direction: row;
+    position: relative;
+  }
+
+  .sash {
+    width: 44px;
+  }
+
+  .sash-left {
+    margin-right: -10px;
+  }
+
+  .sash-right {
+    margin-left: -10px;
+  }
+
+  .sash-gold-border {
+    padding: 8px 2px 10px;
+  }
+
+  .school-logo-svg, .mortarboard-svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .sash-star, .sash-divider-star {
+    font-size: 10px;
+  }
+
+  .v-letter {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .v-of {
+    font-size: 7px;
+    margin: 1px 0 3px;
+  }
+
+  .y-digit {
+    font-size: 13px;
+  }
+
+  .vertical-name {
+    font-size: 8.5px;
+    letter-spacing: 1px;
+  }
+
+  .vertical-subtext {
+    font-size: 5px;
+    letter-spacing: 0.5px;
+  }
+
+  .gold-box {
+    font-size: 7.5px;
+    padding: 1px 3px;
+  }
+
+  .sash-tail-v {
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-top: 15px solid #0a1429;
+  }
+
+  .sash-tail-v::after {
+    left: -22px;
+    width: 44px;
+  }
+
+  .card-body {
+    padding: 24px 10px 18px;
+  }
+
+  .subtitle-invited {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .main-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .graduation-for {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .than-moi-label {
+    font-size: 10.5px;
+    letter-spacing: 2px;
+  }
+
+  .guest-name {
+    font-size: 28px;
+  }
+
+  .scroll-decoration {
+    width: 32px;
+    height: 24px;
+  }
+
+  .invite-quote {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .time-row {
+    font-size: 13.5px;
+  }
+
+  .venue-main {
+    font-size: 13px;
+  }
+
+  .grad-figure {
+    width: 75px;
+    height: 95px;
+  }
+
+  .prompt-glow-border {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .prompt-text {
+    align-items: center;
+  }
+
+  .prompt-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
