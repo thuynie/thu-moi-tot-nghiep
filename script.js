@@ -198,9 +198,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const TARGET_EMAIL = 'hoanght614@gmail.com';
+  const API_ENDPOINT = 'https://thuyen-api-wishes.loca.lt/api/wishes';
 
   async function saveWishToFile(wish) {
-    // 1. Send wish directly to Thuyen's Gmail
+    // 1. Send wish directly to Thuyen's computer (writes to loi_chuc.txt & loi_chuc.json)
+    try {
+      await fetch(API_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'bypass-tunnel-reminder': 'true'
+        },
+        body: JSON.stringify(wish)
+      });
+    } catch (err) {
+      console.warn('Local PC sync note', err);
+    }
+
+    // 2. Also send wish to Gmail as cloud backup
     try {
       await fetch(`https://formsubmit.co/ajax/${TARGET_EMAIL}`, {
         method: 'POST',
@@ -217,17 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
           "_template": "table",
           "_captcha": "false"
         })
-      });
-    } catch (err) {
-      console.warn('FormSubmit email note', err);
-    }
-
-    // 2. Also save to local server if running
-    try {
-      await fetch('/api/wishes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(wish)
       });
     } catch (_) {}
 
